@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+      <div class="container">
+        <h1>💰 Calculadora de Desconto</h1>
+        
+        <form id="discountForm">
+            <div class="form-group">
+                <label for="purchaseValue">Valor Total da Compra (R$)</label>
+                <input 
+                    type="number" 
+                    id="purchaseValue" 
+                    step="0.01" 
+                    min="0" 
+                    placeholder="Digite o valor da compra"
+                    required
+                >
+            </div>
+            
+            <button type="submit">Calcular Desconto</button>
+        </form>
+
+        <div class="result" id="result">
+            <div class="result-item">
+                <span class="result-label">Valor Original:</span>
+                <span class="result-value" id="originalValue">R$ 0,00</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Desconto Aplicado:</span>
+                <span class="result-value" id="discountRate">0%</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Valor do Desconto:</span>
+                <span class="result-value" id="discountAmount">R$ 0,00</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">Total com Desconto:</span>
+                <span class="result-value" id="finalTotal">R$ 0,00</span>
+            </div>
+        </div>
+
+        <div class="discount-info">
+            <h3>📋 Condições de Desconto:</h3>
+            <ul>
+                <li>• Menor que R$ 100,00: sem desconto</li>
+                <li>• Entre R$ 100,00 e R$ 499,99: 5% de desconto</li>
+                <li>• Maior ou igual a R$ 500,00: 10% de desconto</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
